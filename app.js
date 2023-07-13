@@ -1,12 +1,18 @@
 const express = require('express');
 const app = express();
-const {products} = require('./data')
 
 app.get('/', (req, res) => {
-    res.send('<h1> Home page</h1> <a href="/api/products">products</a>')
+    const method = req.method;
+    const url = req.url;
+    const time = new Date().getFullYear();
+    console.log(method, url, time);
+    res.send('Home');
 })
 
+app.get('/about', (rq, res) => {
+    res.send('About');
+})
 
-app.listen(5000, () =>{
-    console.log('Serve is listening on port 5000....');
+app.listen(5000, () => {
+    console.log('the server is listening on the port 5000...')
 })
