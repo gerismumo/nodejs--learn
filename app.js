@@ -9,10 +9,10 @@ app.get('/', (req, res) => {
     res.send('Home');
 })
 
-app.get('/about', (rq, res) => {
+app.get('/about', (req, res) => {
     res.send('About');
 })
 
 app.listen(5000, () => {
-    console.log('the server is listening on the port 5000...')
+    console.log('the server is listening on the port 5000...');
 })
